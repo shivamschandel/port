@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Portfolio</title>
+  <style>
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 40px 0;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi! I'm a passionate web developer with experience in creating beautiful and functional websites. I specialize in front-end development using HTML, CSS, and JavaScript.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>A brief description of the project.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>A brief description of the project.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 3</h3>
+          <p>A brief description of the project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Example: Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      if(name && email && message) {
+        alert('Message Sent!');
+      } else {
+        alert('Please fill out all fields.');
+      }
+
+      // Reset form after submission
+      document.getElementById('contact-form').reset();
+    });
+  </script>
+
+</body>
+</html>
